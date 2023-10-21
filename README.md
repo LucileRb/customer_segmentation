@@ -19,6 +19,8 @@ segmentation sur l'ensemble des clients
 
 -> norme PEP8
 
+RANDOM STATE -> 42
+
 # données
 historique de commandes, les produits achetés, les commentaires de satisfaction, et la
 localisation des clients depuis janvier 2017
@@ -92,6 +94,13 @@ Label encoding should be used for non-ordinal (aka nominal) variables (where ord
 ici ordre compte pour order_status mais pas pour payment type et product category
 -> faire ordinal encoding pour order_status et label encoding pour les deux autres
 
+### Scaling
+
+https://forecastegy.com/posts/standardscaler-vs-minmaxscaler-difference/
+
+scaling sur données numériques uniquement (exclure données encodées du scaling)
+standardscaler
+
 ### Clustering
 
 Modèles à tester :
@@ -115,3 +124,9 @@ Métriques d'évalutation :
 
 ne choisir qu'une métrique et se baser dessus
 si j'en prends trop, peuvent dire des choses différentes et ne va m'avancer à rien
+
+### ARI score
+
+https://amueller.github.io/aml/04-model-evaluation/17-cluster-evaluation.html
+https://reval.readthedocs.io/en/latest/
+https://github.com/FlorentF9/skstab
