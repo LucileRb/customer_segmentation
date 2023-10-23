@@ -32,6 +32,9 @@ localisation des clients depuis janvier 2017
 méthodes non supervisées
 regrouper clients de profils similaires
 
+# fichier requireements
+pip freeze > requirements.txt 
+
 # Notebooks : 
 1) Data exploration
 Exploration de chaque dataset et nettoyage (duplicats, outliers...)
