@@ -133,3 +133,16 @@ si j'en prends trop, peuvent dire des choses différentes et ne va m'avancer à 
 https://amueller.github.io/aml/04-model-evaluation/17-cluster-evaluation.html
 https://reval.readthedocs.io/en/latest/
 https://github.com/FlorentF9/skstab
+
+
+
+
+### presentation
+
+https://www.slideshare.net/MichaelFUMERY1/segmentation-dun-fichier-client-machine-learning ### idées pour présentation
+
+
+# A FAIRE
+
+- renommer order time et shipping machin truc
+-> delai de livraison, 
