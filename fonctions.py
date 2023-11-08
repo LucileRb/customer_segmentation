@@ -10,9 +10,9 @@ from IPython.display import display
 
 # Duplicats
 def remove_duplicates(df):
-    """Fonction pour détécter les doublons dans un jeu de données et les supprimer si il y en a"""
+    """Fonction pour détecter les doublons dans un jeu de données et les supprimer si il y en a"""
 
-    print('********** Détéction des doublons **********\n')
+    print('********** Détection des doublons **********\n')
     
     # Nombre de duplicats dans le jeu de données
     doublons = df.duplicated().sum()
@@ -34,9 +34,9 @@ def remove_duplicates(df):
 
 # Données manquantes
 def nan_detection(df):
-    """Fonction pour détécter les données manquantes dans un jeu de données et afficher insights pertinents"""
+    """Fonction pour détecter les données manquantes dans un jeu de données et afficher insights pertinents"""
 
-    print('********** Détéction des données manquantes **********\n')
+    print('********** Détection des données manquantes **********\n')
 
     # Nombre total de nan :
     total_nan = df.isna().sum().sum()
