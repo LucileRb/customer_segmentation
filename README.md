@@ -1,148 +1,36 @@
-# customer_segmentation
+# Openclassrooms Projet n°5 : "Segmentez des clients d'un site e-commerce"
+Parcours Data Science
 
-Olist -> e-commerce
-Segmentation clients pour campagnes de com
-comprendre les différents types d'utilisateurs grace à :
-- comportement
-- données perso
+## Consignes
 
-fournir une description actionable de la segmentation + analyse de la stabilité des segments au cours du tps
+Données : https://www.kaggle.com/olistbr/brazilian-ecommerce
 
-but
+Olist souhaite que vous fournissiez à ses équipes d'e-commerce une segmentation des clients qu’elles pourront utiliser au quotidien pour leurs campagnes de communication.
 
-1) segmentation
-différencier les bons et moins bons clients en termes de commandes et de satisfaction
-segmentation sur l'ensemble des clients
+Enfin, votre client, Olist, a spécifié sa demande ainsi :
 
-2) recommandation de fréquence de maj de la segmentation
+* La segmentation proposée doit être exploitable et facile d’utilisation pour l’équipe marketing.
+* Vous évaluerez la fréquence à laquelle la segmentation doit être mise à jour, afin de pouvoir effectuer un devis de contrat de maintenance.
+* Le code fourni doit respecter la convention PEP8, pour être utilisable par Olist.
 
+Livrables
 
--> norme PEP8
+* Un notebook de l'analyse exploratoire (non cleané, pour comprendre votre démarche).
+* Un notebook (ou code commenté au choix) d’essais des différentes approches de modélisation (non cleané, pour comprendre votre démarche).
+* Un support de présentation pour la soutenance.
 
-RANDOM STATE -> 42
+## Description du projet
+* Mise en place d'un modèle d'apprentissage non supervisé pour réaliser une segmentation client pour un site de e commerce
+* Création d'un pipeline de nettoyage des données et d'identification des features importantes
+* Création de nouvelles features
+* Essais de clustering par différents algorithmes (KMeans, Clustering Hiérarchique, DBScan)
+* Analyse des résultats et explicabilité
+* Optimisation des hyperparamètres
+* Visualisation des données
 
-# données
-historique de commandes, les produits achetés, les commentaires de satisfaction, et la
-localisation des clients depuis janvier 2017
+## Compétences évaluées
+* Adapter les hyperparamètres d'un algorithme non supervisé afin de l'améliorer
+* Évaluer les performances d’un modèle d'apprentissage non supervisé
+* Transformer les variables pertinentes d'un modèle d'apprentissage non supervisé
+* Mettre en place le modèle d'apprentissage non supervisé adapté au problème métier
 
-3% des clients du fichier ont réalisé plusieurs commandes
-
-# méthode
-
-méthodes non supervisées
-regrouper clients de profils similaires
-
-# fichier requireements
-pip freeze > requirements.txt 
-
-# Notebooks : 
-1) Data exploration
-Exploration de chaque dataset et nettoyage (duplicats, outliers...)
-
-Merge
-
-Data engineering - création de nouvelles features
-
-Imputation des valeurs manquantes :
-- variables qualitatives : remplacer les NaN par la modalité la plus fréquente
-- variables quantitatives : imputation KNN
-
-Analyse univariée
-
-Analyse bivariée/multivariée
-
-Export des données
-
-
-2) Segmentation RFM
-
-Sources : 
-https://www.datacamp.com/tutorial/introduction-customer-segmentation-python
-https://medium.com/@ugursavci/customer-segmentation-using-rfm-analysis-in-python-218a3255f714
-https://guillaume-martin.github.io/rfm-segmentation-with-python.html
-
-RFM stands for recency, frequency, and monetary value. A method used to segment customers based on when their
-last purchase was(recency), how often they’ve purchased in the past (frequency), and how much they’ve spent
-overall (monetary). The output can be used to increase customer retention, customer engagement and targeted
-marketing.
-
-R - date de la dernière commande (Récence) = number of days since last purchase
-F - fréquence des commandes = number of purchases during the studied period
-M - montant de la dernière commande ou sur une période donnée = total amount of purchases made during the studied period
-
-but = établir des segments de clients homogènes
-The purpose of RFM analysis is to form segments and, depending on the segment, influence them in a certain way.
-
-3) Clustering - dataset total
-4) Clustering - dataset RFM
-5) Clustering - dataset réduit
-
-### Encoding
-
-encoding -> autre solution (pour catégories):
-- encoding numérique
-- encoding nlp (cf embedding)
-
-3 façons d'encoder variables catégorielles :
-
-- integer encoding -> OrdinalEncoder() ou LabelEncoder() ?
-- one hot encoding -> OneHotEncoder()
-- learned embedding
-
-Ordinal encoding vs Label encoding
-
-Ordinal encoding should be used for ordinal variables (where order matters, like cold, warm, hot)
-Label encoding should be used for non-ordinal (aka nominal) variables (where order doesn't matter, like blonde, brunette)
-
-ici ordre compte pour order_status mais pas pour payment type et product category
--> faire ordinal encoding pour order_status et label encoding pour les deux autres
-
-### Scaling
-
-https://forecastegy.com/posts/standardscaler-vs-minmaxscaler-difference/
-
-scaling sur données numériques uniquement (exclure données encodées du scaling)
-standardscaler
-
-### Clustering
-
-Modèles à tester :
-
-- Kmeans
-- Agglomerative clustering
-- DBSCAN
-- Spectral clustering
-
-Evaluation du clustering
-
-- forme des clusters (cf silhouette score)
-- stabilité des clusters (ARI score)
-
-Métriques d'évalutation :
-
-- Silhouette score/coefficient
-- Davies-Bouldin Index
-- Calinski-Harabasz Index
-- Adjusted Rand Index
-
-ne choisir qu'une métrique et se baser dessus
-si j'en prends trop, peuvent dire des choses différentes et ne va m'avancer à rien
-
-### ARI score
-
-https://amueller.github.io/aml/04-model-evaluation/17-cluster-evaluation.html
-https://reval.readthedocs.io/en/latest/
-
-
-
-
-
-### presentation
-
-https://www.slideshare.net/MichaelFUMERY1/segmentation-dun-fichier-client-machine-learning ### idées pour présentation
-
-
-# A FAIRE
-
-- renommer order time et shipping machin truc
--> delai de livraison, 
