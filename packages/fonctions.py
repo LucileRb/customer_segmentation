@@ -8,6 +8,12 @@ from IPython.display import display
 
 ########## Fonctions ##########
 
+# Labels sur graphs
+def addlabels(x, y):
+    """ Fonction pour ajouter valeurs sur graphs """
+    for i in range(len(x)):
+        plt.text(i, y[i]//2, y[i], ha = 'center', fontstyle = 'italic')
+
 # Duplicats
 def remove_duplicates(df):
     """Fonction pour détecter les doublons dans un jeu de données et les supprimer si il y en a"""

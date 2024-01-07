@@ -1,0 +1,4 @@
+axes.titlesize : 15
+axes.titlecolor : black
+axes.titlefontstyle : italic
+axes.titleweight : bold
