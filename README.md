@@ -1,4 +1,4 @@
-# Openclassrooms Projet n°5 : "Segmentez des clients d'un site e-commerce"
+# OC5 : "Segmentez des clients d'un site e-commerce"
 Parcours Data Science
 
 ## Consignes

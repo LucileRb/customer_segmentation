@@ -16,7 +16,6 @@ segmentation sur l'ensemble des clients
 
 2) recommandation de fréquence de maj de la segmentation
 
-
 -> norme PEP8
 
 RANDOM STATE -> 42
@@ -134,15 +133,6 @@ https://amueller.github.io/aml/04-model-evaluation/17-cluster-evaluation.html
 https://reval.readthedocs.io/en/latest/
 
 
-
-
-
 ### presentation
 
 https://www.slideshare.net/MichaelFUMERY1/segmentation-dun-fichier-client-machine-learning ### idées pour présentation
-
-
-# A FAIRE
-
-- renommer order time et shipping machin truc
--> delai de livraison, 
